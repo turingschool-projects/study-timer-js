@@ -12,6 +12,7 @@ function prepareTimer(event) {
   var timeToSet = $('.study-time').val();
   var timeString = parseInt(timeToSet);
 
+  startStop.prop('disabled', false);
   startStop.text(`Set Timer for ${timeString} minutes`);
 }
 
@@ -30,13 +31,15 @@ function toggleTimer() {
 }
 
 function pauseTimer() {
+  startStop.text("Start Timer")
   clearInterval(timer);
 }
 
 function startTimer() {
+  startStop.text("Pause Timer");
   countdown.text(`${timeLeft} minutes`);
   localStorage.setItem('timeLeft', timeLeft);
-  
+
   timer = setInterval(decrementTimer, 1000)
 }
 
@@ -57,5 +60,6 @@ function decrementTimer() {
     localStorage.clear();
     $('.start-stop').text("");
     $('.study-time').val("");
+    startStop.prop('disabled', true);
   }
 }

@@ -54,7 +54,7 @@ p {
 }
 
 .submit-time:hover {
-
+  background: #386292;
 }
 
 .start-stop {
@@ -71,11 +71,11 @@ p {
 }
 
 .start-stop:hover {
-
+  background: #E17E63;
 }
 
 .start-stop:disabled {
-  background: grey;
+  background: #BFC5CA;
 }
 
 .countdown {
