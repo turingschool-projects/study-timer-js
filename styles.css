@@ -80,5 +80,25 @@ p {
 
 .countdown {
   font-size: 400%;
-  /* visibility: hidden; */
+}
+
+@media screen and (max-width: 900px) {
+  article {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  article {
+    width: 90%;
+  }
+
+  .time-form {
+    width: 80%;
+  }
+
+  .start-stop {
+    width: 80%;
+  }
 }
