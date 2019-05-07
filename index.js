@@ -40,7 +40,7 @@ function startTimer() {
   countdown.text(`${timeLeft} minutes`);
   localStorage.setItem('timeLeft', timeLeft);
 
-  timer = setInterval(decrementTimer, 6000)
+  timer = setInterval(decrementTimer, 1000)
 }
 
 function decrementTimer() {
